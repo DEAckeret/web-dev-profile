@@ -9,17 +9,22 @@
     <link href="/sass/styles.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link href="/node_modules/bootstrap-icons/icons/" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
 </head>
 <body>
     <header class="px-4">
     <nav class="d-flex flex-direction-row align-items-center justify-content-between">
-        <h1 class="display-1">D. E. Ackeret's</h1>
+
+        <h1 class="display-1 header-name">D. E. Ackeret's</h1>
+
+        <div class="loader"></div>
+
         <div>
             <ul class="nav nav-pills">
-                <li class="nav-item">
+                <li class="nav-item px-2">
                     <a class="nav-link active" href="#">Home</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown px-2">
                     <a class="nav-link dropdown-toggle" href="#" id="navDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
                     <ul class="dropdown-menu" aria-labelledby="navDropdown">
                         <li><a class="dropdown-item" href="#">Project 1</a></li>
@@ -27,16 +32,35 @@
                         <li><a class="dropdown-item" href="#">Project 3</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-2">
                     <a class="nav-link" href="#">About me</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-2">
                     <a class="nav-link" href="#">Contact me</a>
                 </li>
             </ul>
         </div>
+
+        <div class="dark-light-toggle">
+            <img class="px-2" src="/node_modules/bootstrap-icons/icons/moon-stars-fill.svg" alt="Dark mode icon" class="dark-mode-icon" id="darkModeIcon">
+            <img class="px-2" src="/node_modules/bootstrap-icons/icons/toggle2-off.svg" alt="Toggle switch" class="toggle-switch" id="toggleSwitch">
+            <img class="px-2" src="/node_modules/bootstrap-icons/icons/sun-fill.svg" alt="Light mode icon" class="light-mode-icon" id="lightModeIcon">
+        </div>
     </nav>
     </header>
+
+    <main>
+        <div class="hero">
+            <div class="hero-text">
+                
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
 
     <!-- jQuery -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
