@@ -8,6 +8,9 @@
     --color-blue-fire-light: #5472d3;
     --color-neutral-fire: #f7e2c3;
 
+    --color-off: #9b9b9b;
+    --color-body-dark: #262731;
+
     --color-primary-dark-mode: #9e36f4;
     --color-primary-light-dark-mode: #c158ff;
     --color-blue-fire-dark-mode: #0d47a1;
@@ -24,9 +27,9 @@
 .loader:after{
   width: 35px;
   aspect-ratio: 1;
-  box-shadow: 0 0 0 3px inset #f44336;
+  box-shadow: 0 0 0 3px inset var(--color-primary);
   position: relative;
-  animation: 1.5s infinite 0.5s;
+  animation: 3s infinite 0.5s;
   animation-name: l7-1,l7-2;
 }
 .loader:before,
@@ -57,7 +60,7 @@
     animation: animateBackground 30s linear infinite;
 }
 
-.header-name-dark {
+.header-name.dark {
     background: linear-gradient(to right, var(--color-primary-dark-mode), var(--color-primary-light-dark-mode), var(--color-neutral-fire-dark-mode), var(--color-blue-fire-light-dark-mode), var(--color-blue-fire-dark-mode), var(--color-primary-dark-mode), var(--color-primary-light-dark-mode), var(--color-neutral-fire-dark-mode), var(--color-blue-fire-light-dark-mode), var(--color-blue-fire-dark-mode), var(--color-primary-dark-mode));
     color: transparent;
     background-size: 200% auto;
@@ -70,6 +73,44 @@
   100% { background-position: 100% 0%; }
 }
 
+
+.bi-toggle2-on {
+  transform: rotate(-90deg);
+}
+
+.sun {
+  color: var(--color-primary);
+}
+
+.sun.dark {
+  color: var(--color-off);
+}
+
+.dark-mode-toggle {
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.dark-mode-toggle.dark {
+  color: var(--color-primary-dark-mode);
+}
+
+.moon{
+  color: var(--color-off);
+}
+
+.moon.dark {
+  color: var(--color-primary-dark-mode);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+body.dark {
+  background-color: var(--color-body-dark);
+}
 
 
   
