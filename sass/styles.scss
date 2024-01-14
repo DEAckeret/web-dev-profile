@@ -1,11 +1,109 @@
 
+// Define a map of directions and properties
+$directions: (
+  t: margin-top padding-top,
+  b: margin-bottom padding-bottom,
+  l: margin-left padding-left,
+  r: margin-right padding-right,
+  x: margin-left margin-right padding-left padding-right,
+  y: margin-top margin-bottom padding-top padding-bottom
+);
+
+// Loop through the directions and properties
+@each $dir, $props in $directions {
+  // Loop through the values from 0 to 10
+  @for $i from 0 through 10 {
+    // Generate the class name with the direction and value
+    .#{$dir}-#{$i} {
+      // Loop through the properties and assign the value in rem
+      @each $prop in $props {
+        #{$prop}: #{$i * 0.25}rem;
+      }
+    }
+  }
+}
+
+
 
 // my code goes here
-$primary: #f44336;
+
+$primary: #f44336; 
+$primary-light: #ff7961;
+$blue-fire: #0d47a1;
+$blue-fire-light: #5472d3;
+$neutral-fire: #f7e2c3;
+$off-color: #9b9b9b;
+$body-dark: #262731;
+$primary-dark-mode: #9e36f4;
+$primary-light-dark-mode: #c158ff;
+
+// Override Bootstrap's color theme variables
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $blue-fire, // Example: Assigning blue-fire as secondary
+  // ... other Bootstrap color variables
+);
+
+// If you want to use these colors for other Bootstrap components
+$btn-primary-bg: $primary;
+$btn-secondary-bg: $blue-fire;
+// ... other component overrides
+
+// Optionally, you can create your own color map for more complex theming
+$custom-colors: (
+  "primary-light": $primary-light,
+  "blue-fire": $blue-fire,
+  "blue-fire-light": $blue-fire-light,
+  "neutral-fire": $neutral-fire,
+  "off-color": $off-color,
+  "body-dark": $body-dark,
+  "primary-dark-mode": $primary-dark-mode,
+  "primary-light-dark-mode": $primary-light-dark-mode
+  // ... more custom colors
+);
+
+// You can then use these colors in your SCSS, for example:
+.some-class {
+  color: map-get($custom-colors, "blue-fire");
+  background-color: map-get($custom-colors, "neutral-fire");
+}
+
+.text-neutral-fire {
+  color: map-get($custom-colors, "neutral-fire");
+}
+
+.text-primary {
+    color: map-get($custom-colors, "primary");
+}
+
+.text-primary-light {
+    color: map-get($custom-colors, "primary-light");
+}
+
+.text-primary.dark {
+    color: map-get($custom-colors, "primary-dark-mode") !important;
+}
+
+.text-primary-light.dark {
+    color: map-get($custom-colors, "primary-light-dark-mode");
+}
+
+.bg-primary.dark {
+    background-color: map-get($custom-colors, "primary-dark-mode") !important;
+}
 
 
 
 
-// import goes on bottom of sass doc
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+// Import Bootstrap's SCSS
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+
+
+
+
+
+
+
+
 

@@ -19,6 +19,16 @@
 }
 
 
+/* testing something out */
+/* .old {
+  border : 3px solid var(--color-primary-dark-mode);
+}
+
+.new {
+  border : 3px solid var(--color-primary);
+} */
+
+
 
 /* From https://css-loaders.com/ */
 /* HTML: <div class="loader"></div> */
@@ -50,6 +60,26 @@
 @keyframes l7-2 {
   0%,55%,100%  {border-bottom-left-radius:0;  border-top-right-radius:0}
   20%,30%      {border-bottom-left-radius:50%;border-top-right-radius:50%}
+}
+
+.loader.dark,
+.loader.dark:before,
+.loader.dark:after {
+  box-shadow: 0 0 0 3px inset var(--color-primary-dark-mode);
+}
+
+@media (max-width: 1200px) {
+ .loader {
+  display: none;
+ }
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0.274);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(4px);
 }
 
 .header-name {
@@ -102,6 +132,47 @@
 .moon.dark {
   color: var(--color-primary-dark-mode);
 }
+
+
+.filler-1 {
+  height: 10rem;
+}
+
+.filler-2 {
+  height: 15rem;
+}
+
+.filler-3 {
+  height: 20rem;
+}
+
+.filler-4 {
+  height: 25rem;
+}
+
+.filler-5 {
+  height: 30rem;
+}
+
+
+.background-object{
+  display: grid;
+  place-items: center;
+  height: 10rem;
+  width: 10rem;
+ border: solid .5rem var(--color-primary);
+ filter: blur(3px);
+}
+
+.background-object.dark {
+  border: solid .5rem var(--color-primary-dark-mode) !important;
+  box-shadow: 0 0 10px #9e36f4, 0 0 20px #e3c5fc, 0 0 30px #ca8ffa, 0 0 40px #af54fa;
+  color: var(--color-neutral-fire);
+}
+
+
+
+
 
 body {
   height: 100vh;
