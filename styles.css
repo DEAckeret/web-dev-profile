@@ -162,6 +162,35 @@ header {
   width: 10rem;
  border: solid .5rem var(--color-primary);
  filter: blur(3px);
+ z-index: -2;
+}
+
+.background-object.css::before {
+  top: 8rem;
+  left: 11rem;
+  display: grid;
+  place-items: center;
+  content: "bootstrap";
+  position: absolute;
+  height: 4rem;
+  width: 13rem;
+  border: solid .5rem var(--color-primary);
+  filter: blur(3px);
+  z-index: -1;
+}
+
+.background-object.css::after {
+  top: -3rem;
+  left: 12rem;
+  display: grid;
+  place-items: center;
+  content: "tailwind";
+  position: absolute;
+  height: 6rem;
+  width: 12rem;
+  border: solid .5rem var(--color-primary);
+  filter: blur(3px);
+  z-index: -1;
 }
 
 .background-object.dark {
