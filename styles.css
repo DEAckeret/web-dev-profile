@@ -19,6 +19,13 @@
 }
 
 
+/* trying something out with flexbox */
+/* oh this is good!! */
+* {
+  min-width: 0;
+}
+
+
 /* testing something out */
 /* .old {
   border : 3px solid var(--color-primary-dark-mode);
@@ -82,6 +89,17 @@ header {
   backdrop-filter: blur(4px);
 }
 
+p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--color-body-dark);
+}
+
+p.dark {
+  color: var(--color-neutral-fire);
+}
+
 .header-name {
     background: linear-gradient(to right, var(--color-primary), var(--color-primary-light), var(--color-neutral-fire), var(--color-blue-fire-light), var(--color-blue-fire), var(--color-primary), var(--color-primary-light), var(--color-neutral-fire), var(--color-blue-fire-light), var(--color-blue-fire), var(--color-primary));
     color: transparent;
@@ -106,6 +124,14 @@ header {
 
 .bi-toggle2-on {
   transform: rotate(-90deg);
+}
+
+.nav-link.dark {
+  color: var(--color-neutral-fire) !important;
+}
+
+.nav-link.active.dark {
+  background-color: var(--color-primary-dark-mode) !important;
 }
 
 .sun {
@@ -133,6 +159,10 @@ header {
   color: var(--color-primary-dark-mode);
 }
 
+.social.dark {
+  color: var(--color-primary-dark-mode);
+}
+
 
 .filler-1 {
   height: 10rem;
@@ -154,19 +184,79 @@ header {
   height: 30rem;
 }
 
+.filler-5 {
+ display: grid;
+ place-items: center;
+}
 
-.background-object{
+
+.preview {
+  height: 20rem;
+  width: 35rem;
+  border: solid .3rem var(--color-off);
+  border-radius: .5rem;
+}
+
+.preview.dark {
+  border: solid .3rem var(--color-primary-light-dark-mode);
+}
+
+.description-container {
   display: grid;
   place-items: center;
+}
+
+
+
+
+.background-object{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 10rem;
   width: 10rem;
  border: solid .5rem var(--color-primary);
  filter: blur(3px);
  z-index: -2;
+ position: relative;
+ right: 5rem;
 }
 
+
+.background-object.html::before {
+  top: 6rem;
+  left: 11rem;
+  display: grid;
+  place-items: center;
+  content: "button";
+  position: absolute;
+  height: 14rem;
+  width: 11rem;
+  border: inherit;
+  box-shadow: inherit;
+  filter: blur(3px);
+  z-index: -2;
+}
+
+.background-object.html::after {
+  top: -3rem;
+  left: 12rem;
+  display: grid;
+  place-items: center;
+  content: "div";
+  position: absolute;
+  height: 6rem;
+  width: 12rem;
+  border: inherit;
+  filter: blur(3px);
+  z-index: -2;
+  box-shadow: inherit;
+}
+
+
+
 .background-object.css::before {
-  top: 8rem;
+  top: 9rem;
   left: 11rem;
   display: grid;
   place-items: center;
@@ -174,9 +264,10 @@ header {
   position: absolute;
   height: 4rem;
   width: 13rem;
-  border: solid .5rem var(--color-primary);
+  border: inherit;
+  box-shadow: inherit;
   filter: blur(3px);
-  z-index: -1;
+  z-index: -2;
 }
 
 .background-object.css::after {
@@ -184,24 +275,123 @@ header {
   left: 12rem;
   display: grid;
   place-items: center;
-  content: "tailwind";
+  content: "flexbox";
   position: absolute;
-  height: 6rem;
-  width: 12rem;
-  border: solid .5rem var(--color-primary);
+  height: 9rem;
+  width: 10rem;
+  border: inherit;
   filter: blur(3px);
-  z-index: -1;
+  z-index: -2;
+  box-shadow: inherit;
+}
+
+.background-object.js {
+  right: 0;
+  left: 3rem;
+  width: 14rem;
+  height: 14rem;
+}
+
+.background-object.js::before {
+  bottom: 7rem;
+  right: 15rem;
+  display: grid;
+  place-items: center;
+  content: "React";
+  position: absolute;
+  height: 8rem;
+  width: 13rem;
+  border: inherit;
+  box-shadow: inherit;
+  filter: blur(3px);
+  z-index: -2;
+}
+
+.background-object.js::after {
+  top: 8rem;
+  right: 16rem;
+  display: grid;
+  place-items: center;
+  content: "jQuery";
+  position: absolute;
+  height: 9rem;
+  width: 10rem;
+  border: inherit;
+  filter: blur(3px);
+  z-index: -2;
+  box-shadow: inherit;
 }
 
 .background-object.dark {
   border: solid .5rem var(--color-primary-dark-mode) !important;
-  box-shadow: 0 0 10px #9e36f4, 0 0 20px #e3c5fc, 0 0 30px #ca8ffa, 0 0 40px #af54fa;
+  box-shadow: 0 0 10px #9e36f4, 0 0 20px #e3c5fc, 0 0 30px #ca8ffa, 0 0 30px #af54fa;
   color: var(--color-neutral-fire);
+}
+
+@keyframes animate-letter-dark {
+  0% {
+    opacity: 100%;
+  }
+
+  30% {
+    opacity: 100%;
+  }
+
+  35% {
+    opacity: 90%;
+  }
+
+  40% {
+    opacity: 50%;
+  }
+
+  45% {
+    opacity: 90%;
+  }
+
+  47% {
+    opacity: 20%;
+  }
+
+  49% {
+    opacity: 80%;
+  }
+
+  52% {
+    opacity: 20%;
+  }
+
+  59% {
+    opacity: 100%;
+  }
+  80% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+
+}
+
+.animate-letter.dark {
+  animation-name: animate-letter-dark;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
 }
 
 
 
+.large-video {
+  height: 30rem;
+  width: 50rem;
+  border: solid .3rem var(--color-off);
+  border-radius: .5rem;
+}
 
+ul {
+  list-style-type: none;
+}
 
 body {
   height: 100vh;

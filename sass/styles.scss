@@ -40,16 +40,15 @@ $primary-light-dark-mode: #c158ff;
 // Override Bootstrap's color theme variables
 $theme-colors: (
   "primary": $primary,
-  "secondary": $blue-fire, // Example: Assigning blue-fire as secondary
-  // ... other Bootstrap color variables
+  "secondary": $blue-fire, 
 );
 
-// If you want to use these colors for other Bootstrap components
+// If I want these colors for other Bootstrap components
 $btn-primary-bg: $primary;
 $btn-secondary-bg: $blue-fire;
-// ... other component overrides
 
-// Optionally, you can create your own color map for more complex theming
+
+// for more complex themeing
 $custom-colors: (
   "primary-light": $primary-light,
   "blue-fire": $blue-fire,
@@ -59,14 +58,7 @@ $custom-colors: (
   "body-dark": $body-dark,
   "primary-dark-mode": $primary-dark-mode,
   "primary-light-dark-mode": $primary-light-dark-mode
-  // ... more custom colors
 );
-
-// You can then use these colors in your SCSS, for example:
-.some-class {
-  color: map-get($custom-colors, "blue-fire");
-  background-color: map-get($custom-colors, "neutral-fire");
-}
 
 .text-neutral-fire {
   color: map-get($custom-colors, "neutral-fire");
