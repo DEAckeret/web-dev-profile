@@ -46,6 +46,21 @@ $(document).ready(function() {
 });
 
 
+$(document).ready(function() {
+
+    var url = window.location.href;
+  
+    $('.nav-link').each(function() {
+      if (url.includes($(this).attr('href'))) {
+        $(this).addClass('active');
+      } else {
+        $(this).removeClass('active');
+      }
+    });
+  });
+
+
+
 // trying something out
 // $(document).ready(function() {
 //     $('.contact-me').click(function() {

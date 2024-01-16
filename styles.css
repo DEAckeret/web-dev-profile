@@ -87,6 +87,11 @@ header {
   position: fixed;
   top: 0;
   backdrop-filter: blur(4px);
+  z-index: 10;
+}
+
+header.dark {
+  background-color: rgba(41, 41, 41, 0.274);
 }
 
 p {
@@ -402,5 +407,11 @@ body.dark {
   background-color: var(--color-body-dark);
 }
 
+.social:hover {
+  fill: var(--color-primary-light);
+}
 
+.social.dark:hover {
+  fill: var(--color-primary-light-dark-mode);
+}
   
