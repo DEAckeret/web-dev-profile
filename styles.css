@@ -35,6 +35,14 @@
   }
 }
 
+img,
+picture, video {
+  max-width: 100%;
+  display: block;
+}
+
+
+
 
 /* trying something out with flexbox */
 /* oh this is good!! */
@@ -123,7 +131,7 @@ body.dark {
 header {
   background-color: rgba(255, 255, 255, 0.274);
   position: fixed;
-  /* min-width: 90rem; */
+  min-width: 90%;
   
   backdrop-filter: blur(4px);
   z-index: 10;
@@ -214,6 +222,12 @@ p.dark {
 .moon.dark {
   color: var(--color-primary-dark-mode);
 }
+
+.social {
+  height: 16rem;
+  width: 16rem;
+}
+
 
 .social.dark {
   color: var(--color-primary-dark-mode);
@@ -439,8 +453,8 @@ p.dark {
 
 
 .large-video {
-  height: 30rem;
-  width: 50rem;
+  min-height: 50vh;
+  max-width: 100%;
   border: solid .3rem var(--color-off);
   border-radius: .5rem;
 }
@@ -453,3 +467,52 @@ p.dark {
   fill: var(--color-primary-light-dark-mode);
 }
   
+
+
+@media (max-width: 1500px) {
+  .social {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  
+}
+
+@media (max-width: 1200px) {
+  .preview {
+    width: 100%;
+  }
+
+  .nav {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .social {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .background-object.css::after,
+  .background-object.html::after,
+  .background-object.html::before,
+  .background-object.css::before,
+  .background-object.js::after,
+  .background-object.js::before {
+    display: none;
+  }
+
+  .background-object.html,
+  .background-object.css,
+  .background-object.js {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .filler-5 {
+    height: 5rem;
+  }
+}

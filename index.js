@@ -67,3 +67,20 @@ $(document).ready(function() {
 //         $("body").find(".old").removeClass("old").addClass("new");
 //     });
 // });
+
+
+function changeHeaderText() {
+  var headerName = $('.header-name').eq(0);
+
+  if (window.matchMedia('(max-width: 1200px)').matches) {
+    headerName.text('D. A.');
+  } else {
+    headerName.text('D. E. Ackeret\'s');
+  }
+}
+
+// Call the function once when the page loads
+$(document).ready(changeHeaderText);
+
+// Call the function again whenever the window is resized
+$(window).resize(changeHeaderText);
