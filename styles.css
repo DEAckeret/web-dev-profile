@@ -16,6 +16,13 @@
     --color-blue-fire-dark-mode: #0d47a1;
     --color-blue-fire-light-dark-mode: #5472d3;
     --color-neutral-fire-dark-mode: #f7e2c3;
+
+    --font-bebas-neue: 'Bebas Neue', sans-serif;
+    --font-caveat: 'Caveat', cursive;
+    --font-dancing-script: 'Dancing Script', cursive;
+    --font-gowun-batang: 'Gowun Batang', serif;
+    --font-ibm-plex-serif: 'IBM Plex Serif', serif;
+
 }
 
 
@@ -515,4 +522,148 @@ p.dark {
   .filler-5 {
     height: 5rem;
   }
+}
+
+
+/* ------------------- ABOUT ME ANIMATION--------------------- */
+
+#dusty {
+  opacity: 0;
+}
+
+.animated-h1 {
+ position: relative;
+ right: 8vw;
+}
+
+@keyframes animate-about {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-14rem) translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-14rem) translateY(-12.5rem);
+    opacity: 0;
+  }
+}
+
+@keyframes animate-me {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(12.5rem) translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(12.5rem) translateY(12.5rem);
+    opacity: 0;
+  }
+}
+
+@keyframes dusty-reveal {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  15% {
+    transform: scale(1);
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
+  
+}
+
+@keyframes cycle-font-styles {
+  0%, 12.5% {
+    font-family: var(--font-caveat);
+  }
+
+  12.5%, 18.75% {
+    font-family: var(--font-dancing-script);
+  }
+
+  18.75%, 25% {
+    font-family: var(--font-gowun-batang);
+  }
+
+  25%, 31.25% {
+    font-family: var(--font-ibm-plex-serif);
+  }
+
+  31.25%, 37.5% {
+    font-family: var(--font-bebas-neue);
+  }
+
+  37.5%, 43.75% {
+    font-family: var(--font-caveat);
+  }
+
+  43.75%, 50% {
+    font-family: var(--font-dancing-script);
+  }
+
+  50%, 56.25% {
+    font-family: var(--font-gowun-batang);
+  }
+
+  56.25%, 62.5% {
+    font-family: var(--font-ibm-plex-serif);
+  }
+
+  62.5%, 68.75% {
+    font-family: var(--font-bebas-neue);
+  }
+
+  68.75%, 75% {
+    font-family: var(--font-caveat);
+  }
+
+  75%, 81.25% {
+    font-family: var(--font-dancing-script);
+  }
+
+  81.25%, 87.5% {
+    font-family: var(--font-gowun-batang);
+  }
+
+  87.5%, 93.75% {
+    font-family: var(--font-ibm-plex-serif);
+  }
+
+  93.75%, 100% {
+    font-family: var(--font-bebas-neue);
+  }
+}
+
+.animate-me {
+  animation-name: animate-me;
+  animation-duration: 8s;
+  animation-fill-mode: forwards;
+}
+
+.animate-about {
+  animation-name: animate-about;
+  animation-duration: 8s;
+  animation-fill-mode: forwards;
+}
+
+.animate-dusty-reveal {
+  animation-name: dusty-reveal, cycle-font-styles;
+  animation-duration: 16s;
+  /* animation-fill-mode: forwards; */
 }

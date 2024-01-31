@@ -36,9 +36,13 @@ $(document).ready(function() {
             $('body').find('.light').addClass('dark');
             $('body').addClass('dark');
 
+            $('.hero-pose img').attr('src', 'assets/images/Night-mode-dusty.png');
+
         } else { 
             $('body').find('.light').removeClass('dark');
             $('body').removeClass('dark');
+
+            $('.hero-pose img').attr('src', 'assets/images/Day-mode-dusty.png');
             
         }
 
@@ -84,3 +88,19 @@ $(document).ready(changeHeaderText);
 
 // Call the function again whenever the window is resized
 $(window).resize(changeHeaderText);
+
+
+
+// <------------------ ABOUT ME ------------------>
+
+$(document).ready(function(){
+  setTimeout(function(){
+    $('#about').addClass('animate-about');
+    // $('#me').addClass('animate-me');
+    $('#me').addClass('animate-me');
+  }, 1500);
+
+  setTimeout(function(){
+  $('#dusty').addClass('animate-dusty-reveal');
+  }, 3700);
+})
