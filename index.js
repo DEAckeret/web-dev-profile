@@ -8,48 +8,53 @@
 //             $('.dark-mode-toggle').addClass('dark');
 //         }
         
-        
 //         if ($('.dark-mode-toggle').hasClass('dark')) {
-//             $('.moon').addClass('dark');
-//             $('.sun').addClass('dark');
-//             $('.header-name').addClass('dark');
+//             $('body').find('.light').addClass('dark');
 //             $('body').addClass('dark');
-//         } else {
-//             $('.moon').removeClass('dark');
-//             $('.sun').removeClass('dark');
-//             $('.header-name').removeClass('dark');
+
+//             $('.hero-pose img').attr('src', 'assets/images/Night-mode-dusty.png');
+
+//         } else { 
+//             $('body').find('.light').removeClass('dark');
 //             $('body').removeClass('dark');
+
+//             $('.hero-pose img').attr('src', 'assets/images/Day-mode-dusty.png');
+            
 //         }
+
 //     });
 // });
 
+
 $(document).ready(function() {
-    $('.dark-mode-toggle').click(function() {
+  // Check if dark mode was previously selected
+  if (localStorage.getItem('darkMode') === 'true') {
+      $('.dark-mode-toggle').addClass('dark');
+      $('body').find('.light').addClass('dark');
+      $('body').addClass('dark');
+      $('.hero-pose img').attr('src', 'assets/images/Night-mode-dusty.png');
+  }
 
-        if ($('.dark-mode-toggle').hasClass('dark')) {
-            $('.dark-mode-toggle').removeClass('dark');
-        } else {
-            $('.dark-mode-toggle').addClass('dark');
-        }
-        
-        if ($('.dark-mode-toggle').hasClass('dark')) {
-            $('body').find('.light').addClass('dark');
-            $('body').addClass('dark');
-
-            $('.hero-pose img').attr('src', 'assets/images/Night-mode-dusty.png');
-
-        } else { 
-            $('body').find('.light').removeClass('dark');
-            $('body').removeClass('dark');
-
-            $('.hero-pose img').attr('src', 'assets/images/Day-mode-dusty.png');
-            
-        }
-
-    });
+  $('.dark-mode-toggle').click(function() {
+      if ($('.dark-mode-toggle').hasClass('dark')) {
+          $('.dark-mode-toggle').removeClass('dark');
+          $('body').find('.light').removeClass('dark');
+          $('body').removeClass('dark');
+          $('.hero-pose img').attr('src', 'assets/images/Day-mode-dusty.png');
+          localStorage.setItem('darkMode', 'false');
+      } else {
+          $('.dark-mode-toggle').addClass('dark');
+          $('body').find('.light').addClass('dark');
+          $('body').addClass('dark');
+          $('.hero-pose img').attr('src', 'assets/images/Night-mode-dusty.png');
+          localStorage.setItem('darkMode', 'true');
+      }
+  });
 });
 
 
+
+// indicates styles the active link in the navbar
 $(document).ready(function() {
 
     var url = window.location.href;
@@ -63,14 +68,6 @@ $(document).ready(function() {
     });
   });
 
-
-
-// trying something out
-// $(document).ready(function() {
-//     $('.contact-me').click(function() {
-//         $("body").find(".old").removeClass("old").addClass("new");
-//     });
-// });
 
 
 function changeHeaderText() {
