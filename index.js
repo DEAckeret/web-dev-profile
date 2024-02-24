@@ -32,7 +32,7 @@ $(document).ready(function() {
       $('.dark-mode-toggle').addClass('dark');
       $('body').find('.light').addClass('dark');
       $('body').addClass('dark');
-      $('.hero-pose img').attr('src', 'assets/images/Night-mode-dusty.png');
+      $('.hero-pose img').attr('src', './assets/images/Night-mode-dusty.png');
   }
 
   $('.dark-mode-toggle').click(function() {
@@ -40,13 +40,13 @@ $(document).ready(function() {
           $('.dark-mode-toggle').removeClass('dark');
           $('body').find('.light').removeClass('dark');
           $('body').removeClass('dark');
-          $('.hero-pose img').attr('src', 'assets/images/Day-mode-dusty.png');
+          $('.hero-pose img').attr('src', './assets/images/Day-mode-dusty.png');
           localStorage.setItem('darkMode', 'false');
       } else {
           $('.dark-mode-toggle').addClass('dark');
           $('body').find('.light').addClass('dark');
           $('body').addClass('dark');
-          $('.hero-pose img').attr('src', 'assets/images/Night-mode-dusty.png');
+          $('.hero-pose img').attr('src', './assets/images/Night-mode-dusty.png');
           localStorage.setItem('darkMode', 'true');
       }
   });
