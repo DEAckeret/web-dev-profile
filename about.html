@@ -17,12 +17,48 @@
     </head>
 <body>
 
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav d-none">
+        <div class="light">
+            <ul class="nav-list nav-pills light gap-2">
+                <li class="rounded-3 nav-item px-2 light">
+                    <a class="nav-link active light" href="index.html" title="home">Home</a>
+                </li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle light" href="#" id="navDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title ="projects">Projects</a>
+                    <ul class="dropdown-menu" aria-labelledby="navDropdown">
+                        <li><a class="dropdown-item" href="https://deackeret.github.io/Space-Tourism/" rel="noopener noreferrer" target="_blank" title="space tourism site">Space Tourism</a></li>
+                        <li><a class="dropdown-item" href="https://deackeret.github.io/Dictionary-App-API/" rel="noopener noreferrer" target="_blank" title="dictionary api site">Dictionary API App</a></li>
+                        <li><a class="dropdown-item" href="https://deackeret.github.io/news-homepage/" rel="noopener noreferrer" target="_blank" title="responsive grid site">Responsive Grid</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link light" href="about.html" title="about me">About me</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link contact-me light" href="contact.html" title="contact me">Contact me</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END MOBILE NAV -->
+
     <header class="light">
         <nav class="d-flex flex-direction-row align-items-center justify-content-around">
     
             <h1 class="display-1 header-name light">D. E. Ackeret's</h1>
     
             <div class="loader light"></div>
+
+            <!-- HAMBURGER -->
+
+            <button class="hamburger-btn light" type="menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </button>
+            
+        <!-- END HAMBURGER -->
     
             <div class="light">
                 <ul class="nav nav-pills light">
@@ -74,11 +110,22 @@
             <div class="filler-3"></div>
 
             <div id="about-content" class="">
-                <p class="m-4">I am passionate about front-end web development. Since I have picked up the skill I have come accross so many communities and interesting technologies</p>
+                <p class="m-4 text-indent">
+                    I am passionate about front-end development! Since I have picked up the skill I have come accross so many different communities and interesting technologies.
+                </p>
+                <p class="m-4">But who is this front-end developer? Well I have many wide ranging interests and hobbies. The TLDR is I am just a very positive and understanding guy who really enjoys getting to know people from many walks of life!</p>
                 <hr>
-                <img src = "assets/images/profile pic.jpg" class="py-4">
+                <img src = "assets/images/profile pic.jpg" class="py-4 rounded">
                 <hr>
-                <p class="m-4">Currently you can find me roaming the mountains of my home state of Montana. </p>
+                <p class="m-4 text-indent">Currently you can find me roaming the mountains of my home state of Montana. When I need some time to think or just appreciate where im at, I go out for a nice hike, taking in all the natural beauty</p>
+                
+                <div class="filler-3"></div>
+
+                <div>
+                    <video class="" width="100%" height="700" controls>
+                        <source src="assets/video/" type="video/mp4">
+                        Your browser does not support the video tag.
+                </div>
             </div>
         </main>
 

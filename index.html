@@ -12,6 +12,33 @@
     <link href="./styles.css" rel="stylesheet">
 </head>
 <body>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav d-none">
+        <div class="light">
+            <ul class="nav-list nav-pills light gap-2">
+                <li class="rounded-3 nav-item px-2 light">
+                    <a class="nav-link active light" href="index.html" title="home">Home</a>
+                </li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle light" href="#" id="navDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title ="projects">Projects</a>
+                    <ul class="dropdown-menu" aria-labelledby="navDropdown">
+                        <li><a class="dropdown-item" href="https://deackeret.github.io/Space-Tourism/" rel="noopener noreferrer" target="_blank" title="space tourism site">Space Tourism</a></li>
+                        <li><a class="dropdown-item" href="https://deackeret.github.io/Dictionary-App-API/" rel="noopener noreferrer" target="_blank" title="dictionary api site">Dictionary API App</a></li>
+                        <li><a class="dropdown-item" href="https://deackeret.github.io/news-homepage/" rel="noopener noreferrer" target="_blank" title="responsive grid site">Responsive Grid</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link light" href="about.html" title="about me">About me</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link contact-me light" href="contact.html" title="contact me">Contact me</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END MOBILE NAV -->
+    
     <header class="light">
     <nav class="d-flex flex-direction-row align-items-center justify-content-around">
         <!-- switched out content between for space around -->
@@ -20,8 +47,20 @@
 
         <div class="loader light"></div>
 
+        <!-- HAMBURGER -->
+
+
+        
+        <button class="hamburger-btn light" type="menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+            </svg>
+        </button>
+        
+    <!-- END HAMBURGER -->
+
         <div class="light">
-            <ul class="nav nav-pills light">
+            <ul class="nav nav-pills light ">
                 <li class="rounded-3 nav-item px-2 light">
                     <a class="nav-link active light" href="index.html" title="home">Home</a>
                 </li>
@@ -42,6 +81,7 @@
             </ul>
         </div>
 
+        
         <div class="dark-light-toggle">
             <div class="sun light">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
@@ -62,6 +102,11 @@
             </div>
         </div>
     </nav>
+
+
+   
+   
+    
     </header>
 
     <main class="container mt-7">
@@ -145,7 +190,7 @@
             </div>
         </div>
 
-        <div class="filler-3"></div>
+        <div class="filler-2"></div>
         <!-- <div class="filler-4"></div> -->
 
         <div class="row text-center">
@@ -153,9 +198,11 @@
             <a class="" href="#" rel="noopener noreferrer" target="_blank" title="various projects">
             <video src="./assets/video/final-vid.mov" class="large-video" loop autoplay muted playsinline></video>
             </a>
-            
-            <hr class="mt-5">
-            <p class="light">Thank you so much for visiting my website! I hope you enjoyed your time here. If you would like to get a hold of me please feel free to send me a message via email or any of the social media links below!</p>
+                <div class="end-statement">
+                <p class="light mt-5">I am always up for a challenge! I try to push myself a little further every day and learn something new. Web development is a wide world of possiblities and I truely do enjoy becoming more immersed in it!</p>
+                <hr class="my-3">
+                <p class="light">Thank you so much for visiting my website! I hope you enjoyed your time here. If you would like to get a hold of me please feel free to send me a message via email or any of the social media links below!</p>
+                </div>
             </div>
         </div>
         <div class="filler-2"></div>

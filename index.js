@@ -101,3 +101,32 @@ $(document).ready(function(){
   $('#dusty').addClass('animate-dusty-reveal');
   }, 3700);
 })
+
+
+// <------------------ MOBILE MENU ------------------>
+
+$(document).ready(function(){
+  $('.hamburger-btn').click(function(){
+    console.log('hamburger clicked');
+    if ($('.mobile-nav').hasClass('is-active')) {
+      $('.mobile-nav').removeClass('is-active');
+      $('.mobile-nav').addClass('d-none');
+      $('.mobile-nav').removeClass('d-flex');
+    } else {
+    $('.mobile-nav').addClass('is-active');
+    $('.mobile-nav').removeClass('d-none');
+    $('.mobile-nav').addClass('d-flex');
+    }
+  });
+});
+
+
+$(window).resize(function() {
+  var windowWidth = $(window).width();
+
+  if(windowWidth > 1200 && $('.mobile-nav').hasClass('is-active')) {
+    $('.mobile-nav').removeClass('is-active');
+    $('.mobile-nav').addClass('d-none');
+    $('.mobile-nav').removeClass('d-flex');
+  }
+});
