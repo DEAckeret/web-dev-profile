@@ -154,13 +154,13 @@
 
                 <div>
                     <p class="m-4 text-indent light">I take a lot of joy in doing art when I can find the free time to do so! I admire animation in particular and hope to keep growing and sharing my works of art!</p>
-                    <video class="" width="100%" height="auto" autoplay muted loop playsinline>
-                        <source src="assets/video/Earth Show.mp4" type="video/mp4">
+                    <video class="" width="100%" height="auto" muted loop playsinline poster="./assets/video/web/earth-show.jpg" preload="none" data-play-when-visible>
+                        <source src="./assets/video/web/earth-show.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <hr class="my-4">
-                    <video width="100%" height="auto" autoplay muted loop playsinline>
-                        <source src="assets/video/flappy bird video.mov" type="video/mp4">
+                    <video width="100%" height="auto" muted loop playsinline poster="./assets/video/web/flappy-bird.jpg" preload="none" data-play-when-visible>
+                        <source src="./assets/video/web/flappy-bird.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     
@@ -235,6 +235,23 @@
         </footer>
 
     <!-- jQuery -->
+    <!-- Play each video only while it's on screen, so visitors don't download them all at once -->
+    <script>
+        (function () {
+            var videos = document.querySelectorAll('video[data-play-when-visible]');
+            if (!('IntersectionObserver' in window)) {
+                videos.forEach(function (video) { video.play().catch(function () {}); });
+                return;
+            }
+            var watcher = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) entry.target.play().catch(function () {});
+                    else entry.target.pause();
+                });
+            }, { rootMargin: '200px 0px' });
+            videos.forEach(function (video) { watcher.observe(video); });
+        })();
+    </script>
     <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
     <script src="./dist/jQuery.webpack.bundle.js"></script>
     <!-- Bootstrap JS -->
