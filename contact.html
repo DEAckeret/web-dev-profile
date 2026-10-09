@@ -12,9 +12,22 @@
         <link href="./styles.css" rel="stylesheet">
     </head>
 <body>
-    <!-- Apply saved dark mode before anything is drawn, so there's no light flash on load -->
+    <!-- Apply saved dark mode as each element loads, before anything is drawn, so there's no light flash -->
     <script>
-        try { if (localStorage.getItem('darkMode') === 'true') document.body.classList.add('dark'); } catch (e) {}
+        (function () {
+            try { if (localStorage.getItem('darkMode') !== 'true') return; } catch (e) { return; }
+            document.body.classList.add('dark');
+            function markDark(node) {
+                if (node.nodeType !== 1) return;
+                if (node.matches('.light, .dark-mode-toggle')) node.classList.add('dark');
+                if (node.matches('.hero-pose img')) node.src = './assets/images/Night-mode-dusty.png';
+            }
+            var watcher = new MutationObserver(function (changes) {
+                changes.forEach(function (change) { change.addedNodes.forEach(markDark); });
+            });
+            watcher.observe(document.body, { childList: true, subtree: true });
+            document.addEventListener('DOMContentLoaded', function () { watcher.disconnect(); });
+        })();
     </script>
 
     <!-- MOBILE NAV -->
@@ -158,13 +171,6 @@
         </footer>
 
     <!-- jQuery -->
-    <!-- Finish applying saved dark mode before the larger scripts below download -->
-    <script>
-        if (document.body.classList.contains('dark')) {
-            document.querySelectorAll('.light, .dark-mode-toggle').forEach(function (el) { el.classList.add('dark'); });
-            document.querySelectorAll('.hero-pose img').forEach(function (img) { img.src = './assets/images/Night-mode-dusty.png'; });
-        }
-    </script>
     <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
     <script src="./dist/jQuery.webpack.bundle.js"></script>
     <!-- Bootstrap JS -->
