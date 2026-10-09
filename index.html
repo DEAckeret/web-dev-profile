@@ -12,6 +12,10 @@
     <link href="./styles.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Apply saved dark mode before anything is drawn, so there's no light flash on load -->
+    <script>
+        try { if (localStorage.getItem('darkMode') === 'true') document.body.classList.add('dark'); } catch (e) {}
+    </script>
 
     <!-- MOBILE NAV -->
     <div class="mobile-nav d-none">
@@ -252,6 +256,13 @@
     </footer>
 
     <!-- jQuery -->
+    <!-- Finish applying saved dark mode before the larger scripts below download -->
+    <script>
+        if (document.body.classList.contains('dark')) {
+            document.querySelectorAll('.light, .dark-mode-toggle').forEach(function (el) { el.classList.add('dark'); });
+            document.querySelectorAll('.hero-pose img').forEach(function (img) { img.src = './assets/images/Night-mode-dusty.png'; });
+        }
+    </script>
     <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
     <script src="./dist/jQuery.webpack.bundle.js"></script>
     <!-- Bootstrap JS -->
