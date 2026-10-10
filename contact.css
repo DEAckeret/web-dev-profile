@@ -1,0 +1,22 @@
+/* ===================================================================
+   contact.css
+   Contact page only (loaded after styles.css): the drone video above
+   the "Thank you!" message. The video plays once and stops on its
+   last frame.
+   =================================================================== */
+
+.contact-content { padding-top: 9rem; }
+
+.contact-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.75rem;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 767px) {
+  .contact-content { padding-top: 7rem; }
+  .contact-video { margin-bottom: 2.5rem; }
+}

@@ -24,6 +24,7 @@
         <link href="./sass/styles.min.css" rel="stylesheet">
         <link href="./styles.css" rel="stylesheet">
         <link href="./quick-questions.css" rel="stylesheet">
+        <link href="./contact.css" rel="stylesheet">
     </head>
 <body>
     <!-- Apply saved dark mode as each element loads, before anything is drawn, so there's no light flash -->
@@ -132,8 +133,11 @@
         </header>
 
         <main>
-            <div class="container">
-            <div class="filler-3"></div>
+            <div class="container contact-content">
+            <!-- Drone fly-out: plays once (no loop) and stops on the last frame -->
+            <video class="contact-video" autoplay muted playsinline preload="auto" poster="./assets/video/web/drone-flyout.jpg">
+                <source src="./assets/video/web/drone-flyout.mp4" type="video/mp4">
+            </video>
             <h1 class="display-1 text-center text-primary light">Thank you!</h1>
             <hr>
             <p class="m-4 text-indent light">It means a lot to me that you came to visit my webpage! I hope you enjoyed your stay here and found the time valuable.</p>
