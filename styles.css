@@ -733,3 +733,32 @@ p.dark {
   animation-duration: 16s;
   /* animation-fill-mode: forwards; */
 }
+
+/* ------------------- PHONE FOOTER WIDTH --------------------- */
+/* The footer icons' gaps and side margins added up to wider than a phone
+   screen (496px on a 390px phone), which let the whole page slide sideways.
+   Tighter spacing on small screens keeps the footer inside the screen. */
+@media (max-width: 575px) {
+  .contact-info {
+    gap: 1rem !important;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .contact-info {
+    gap: 0.75rem !important;
+    margin-left: 0.5rem !important;
+    margin-right: 0.5rem !important;
+  }
+}
+
+/* On phones, the About page intro animation moves "me" past the right edge,
+   which widened the page. Trim anything inside the main content at its edge
+   (the full screen width on phones) instead of letting the page slide sideways. */
+@media (max-width: 575px) {
+  main {
+    overflow-x: clip;
+  }
+}
