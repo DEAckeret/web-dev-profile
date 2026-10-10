@@ -154,12 +154,12 @@
 
                 <div>
                     <p class="m-4 text-indent light">I take a lot of joy in doing art when I can find the free time to do so! I admire animation in particular and hope to keep growing and sharing my works of art!</p>
-                    <video class="" width="100%" height="auto" muted loop playsinline poster="./assets/video/web/earth-show.jpg" preload="none" data-play-when-visible>
+                    <video class="" width="100%" height="auto" muted loop playsinline poster="./assets/video/web/earth-show.jpg" autoplay data-play-when-visible>
                         <source src="./assets/video/web/earth-show.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                     <hr class="my-4">
-                    <video width="100%" height="auto" muted loop playsinline poster="./assets/video/web/flappy-bird.jpg" preload="none" data-play-when-visible>
+                    <video width="100%" height="auto" muted loop playsinline poster="./assets/video/web/flappy-bird.jpg" autoplay data-play-when-visible>
                         <source src="./assets/video/web/flappy-bird.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -235,7 +235,7 @@
         </footer>
 
     <!-- jQuery -->
-    <!-- Play each video only while it's on screen, so visitors don't download them all at once -->
+    <!-- Pause each video while it's off screen and resume when it scrolls back into view -->
     <script>
         (function () {
             var videos = document.querySelectorAll('video[data-play-when-visible]');

@@ -170,7 +170,7 @@
         <div class="mt-5 row gap-5 align-items-center text-center text-lg-start justify-content-between">
             <div class="col-lg-6">
                 <a href = "https://deackeret.github.io/Space-Tourism/" rel="noopener noreferrer" target="_blank" title="space tourism website">
-                <video class="preview light" loop muted playsinline src="./assets/video/web/space-tourism.mp4" poster="./assets/video/web/space-tourism.jpg" preload="none" data-play-when-visible></video>
+                <video class="preview light" loop muted playsinline src="./assets/video/web/space-tourism.mp4" poster="./assets/video/web/space-tourism.jpg" autoplay data-play-when-visible></video>
                 </a>
             </div>
             <div class="col-lg-5 px-5 description-container">
@@ -196,7 +196,7 @@
             </div>
             <div class="col-lg-6">
                 <a href = "https://deackeret.github.io/Dictionary-App-API/" rel="noopener noreferrer" target="_blank" title="dictionary api app">
-                <video class="preview light" loop muted playsinline src="./assets/video/web/dictionary-app.mp4" poster="./assets/video/web/dictionary-app.jpg" preload="none" data-play-when-visible></video>
+                <video class="preview light" loop muted playsinline src="./assets/video/web/dictionary-app.mp4" poster="./assets/video/web/dictionary-app.jpg" autoplay data-play-when-visible></video>
                 </a>
             </div>
         </div>
@@ -210,7 +210,7 @@
         <div class="mt-5 row gap-5 text-center text-lg-start justify-content-between">
             <div class="col-lg-5">
                 <a href="https://deackeret.github.io/news-homepage/" rel="noopener noreferrer" target="_blank" title="news homepage">
-                <video class="preview light" loop muted playsinline src="./assets/video/web/news-homepage.mp4" poster="./assets/video/web/news-homepage.jpg" preload="none" data-play-when-visible></video>
+                <video class="preview light" loop muted playsinline src="./assets/video/web/news-homepage.mp4" poster="./assets/video/web/news-homepage.jpg" autoplay data-play-when-visible></video>
                 </a>
             </div>
             <div class="col-lg-6 px-5 description-container">
@@ -226,7 +226,7 @@
         <div class="row text-center">
             <div class="col-lg-12 d-flex flex-column align-items-center justify-content-center">
             <a class="" href="#" rel="noopener noreferrer" target="_blank" title="various projects">
-            <video class="large-video" loop muted playsinline src="./assets/video/web/various-projects.mp4" poster="./assets/video/web/various-projects.jpg" preload="none" data-play-when-visible></video>
+            <video class="large-video" loop muted playsinline src="./assets/video/web/various-projects.mp4" poster="./assets/video/web/various-projects.jpg" autoplay data-play-when-visible></video>
             </a>
                 <div class="end-statement">
                 <p class="light mt-5">I am always up for a challenge! I try to push myself a little further every day and learn something new. Web development is a wide world of possibilities and I truly do enjoy becoming more immersed in it!</p>
@@ -282,7 +282,7 @@
     </footer>
 
     <!-- jQuery -->
-    <!-- Play each video only while it's on screen, so visitors don't download them all at once -->
+    <!-- Pause each video while it's off screen and resume when it scrolls back into view -->
     <script>
         (function () {
             var videos = document.querySelectorAll('video[data-play-when-visible]');
