@@ -76,7 +76,7 @@ function changeHeaderText() {
   if (window.matchMedia('(max-width: 1200px)').matches) {
     headerName.text('D. A.');
   } else {
-    headerName.text('D. E. Ackeret\'s');
+    headerName.text('D. E. Ackeret');
   }
 }
 
