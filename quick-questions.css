@@ -1,0 +1,213 @@
+/* ===================================================================
+   quick-questions.css
+   Styles for the "Quick questions about Dustin" helper
+   (see quick-questions.js). Light mode uses the site's red; dark mode
+   (body.dark) uses the site's purple.
+   =================================================================== */
+
+.qq {
+  --qq-accent: var(--color-primary);
+  --qq-accent-text: #b3261e;
+  --qq-panel-bg: #ffffff;
+  --qq-text: #1f1f24;
+  --qq-muted: #5f6070;
+  --qq-bot-bg: #f2f2f5;
+  --qq-user-bg: #fde4e1;
+  --qq-user-text: #7f1d14;
+  --qq-border: rgba(0, 0, 0, 0.12);
+
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 8; /* below the header (10) and mobile menu (9) */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+body.dark .qq {
+  --qq-accent: var(--color-primary-dark-mode);
+  --qq-accent-text: #d39bff;
+  --qq-panel-bg: #2f3040;
+  --qq-text: var(--color-neutral-fire);
+  --qq-muted: #b9b6c8;
+  --qq-bot-bg: #3b3c4f;
+  --qq-user-bg: #4a2a6b;
+  --qq-user-text: #f3e6ff;
+  --qq-border: rgba(255, 255, 255, 0.14);
+}
+
+/* Round button in the corner */
+.qq-toggle {
+  width: 3.5rem;
+  height: 3.5rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--qq-accent);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease;
+}
+.qq-toggle:hover { transform: scale(1.06); }
+.qq-toggle:focus-visible,
+.qq-close:focus-visible,
+.qq-chip:focus-visible,
+.qq-send:focus-visible,
+.qq-link:focus-visible,
+.qq-input:focus-visible {
+  outline: 3px solid var(--qq-accent);
+  outline-offset: 2px;
+}
+
+/* Panel */
+.qq-panel {
+  width: min(22rem, calc(100vw - 2.5rem));
+  max-height: min(34rem, calc(100vh - 7rem));
+  display: flex;
+  flex-direction: column;
+  background: var(--qq-panel-bg);
+  color: var(--qq-text);
+  border: 1px solid var(--qq-border);
+  border-radius: 1rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+}
+.qq-panel[hidden] { display: none; }
+
+.qq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--qq-border);
+}
+.qq-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--qq-text);
+}
+.qq-note {
+  font-size: 0.8rem;
+  color: var(--qq-muted);
+}
+.qq-close {
+  border: none;
+  background: transparent;
+  color: var(--qq-muted);
+  padding: 0.35rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  line-height: 0;
+}
+.qq-close:hover { color: var(--qq-text); }
+
+/* Conversation */
+.qq-log {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.qq-msg {
+  max-width: 88%;
+  padding: 0.55rem 0.8rem;
+  border-radius: 0.9rem;
+  font-size: 0.95rem;
+}
+.qq-msg-bot {
+  align-self: flex-start;
+  background: var(--qq-bot-bg);
+  color: var(--qq-text);
+  border-bottom-left-radius: 0.25rem;
+}
+.qq-msg-user {
+  align-self: flex-end;
+  background: var(--qq-user-bg);
+  color: var(--qq-user-text);
+  border-bottom-right-radius: 0.25rem;
+}
+.qq-para + .qq-para { margin-top: 0.4rem; }
+
+.qq-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.55rem;
+}
+.qq-link {
+  font-size: 0.85rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--qq-accent-text);
+  border-radius: 999px;
+  color: var(--qq-accent-text);
+  text-decoration: none;
+}
+.qq-link:hover { background: var(--qq-accent-text); color: var(--qq-panel-bg); }
+
+/* Suggested questions */
+.qq-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0 1rem 0.75rem;
+}
+.qq-chip {
+  font-size: 0.85rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--qq-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--qq-text);
+  cursor: pointer;
+}
+.qq-chip:hover { border-color: var(--qq-accent-text); color: var(--qq-accent-text); }
+
+/* Input row */
+.qq-form {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--qq-border);
+}
+.qq-input {
+  flex: 1;
+  min-width: 0;
+  font-size: 1rem; /* 16px keeps iPhone from zooming in */
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--qq-border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--qq-text);
+}
+.qq-input::placeholder { color: var(--qq-muted); }
+.qq-send {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex: none;
+  border: none;
+  border-radius: 50%;
+  background: var(--qq-accent);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .qq { right: 1rem; bottom: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qq-toggle { transition: none; }
+  .qq-toggle:hover { transform: none; }
+}
