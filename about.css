@@ -1,0 +1,137 @@
+/* ===================================================================
+   about.css
+   Layout for the About page only (loaded after styles.css):
+   - a Montana landscape behind the "About / Dusty / me" title animation
+   - sections below, each with its own grid layout
+   Light mode uses the site's red; dark mode (body.dark) its purple.
+   =================================================================== */
+
+/* Keep "Dusty" on screen after the font cycle instead of fading back out.
+   (Replaces the dusty-reveal keyframes from styles.css on this page only.) */
+#dusty.animate-dusty-reveal { animation-fill-mode: forwards; }
+@keyframes dusty-reveal {
+  0%   { opacity: 0; transform: scale(1); font-family: var(--font-bebas-neue); }
+  15%  { transform: scale(1); }
+  25%  { opacity: 1; }
+  100% { opacity: 1; transform: scale(1.25); }
+}
+
+@keyframes about-fade-in {
+  from { opacity: 0; transform: translateY(1.5rem); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ---------- Landscape hero with the title animation ---------- */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: max(36rem, 88vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 0 1rem 1rem;
+  overflow: hidden;
+  background: url("assets/images/outdoors.jpg") center 60% / cover no-repeat;
+  flex-shrink: 0; /* the site's body is a 100vh flex column */
+}
+/* Darkens the photo slightly so the white title stays readable */
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(20, 20, 30, 0.10), rgba(20, 20, 30, 0.55));
+}
+.about-hero .about-title { position: relative; }
+.about-hero h1,
+.about-hero h1.dark { color: #fff !important; text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35); }
+.about-hero-line {
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 300;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  animation: about-fade-in 1.2s ease 9s both;
+}
+
+/* ---------- Shared pieces ---------- */
+.about-main { width: 100%; }
+
+.about-heading {
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 300;
+  color: var(--color-primary);
+  margin: 0 0 1.5rem;
+}
+body.dark .about-heading { color: var(--color-primary-light-dark-mode); }
+
+.about-text p { margin: 0 0 1rem; max-width: 36rem; }
+
+.about-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem;
+}
+figure { margin: 0; }
+
+.about-section { margin: 0 auto 8rem; }
+.about-intro { max-width: 52rem; margin: 3rem auto 7rem; }
+.about-intro p { margin-bottom: 1rem; }
+
+/* Row: photo and text side by side (Outdoors, Baking) */
+.about-row {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 3rem;
+  align-items: center;
+}
+.about-row.about-row-reverse { grid-template-columns: 5fr 7fr; }
+.about-row figure { aspect-ratio: 4 / 3; }
+.about-selfie { object-position: 40% 60%; }
+
+/* Feature + two-up: one large video, then art beside a second video (Art) */
+.about-feature { aspect-ratio: 16 / 9; margin-bottom: 1rem; }
+.about-twoup {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  align-items: start;
+}
+.about-twoup .about-art { aspect-ratio: 2 / 3; }
+.about-twoup .about-vid { aspect-ratio: 16 / 9; }
+.about-twoup .about-text { margin-top: 1.5rem; }
+
+/* Strip: three equal-height tiles, the last one text (Animals) */
+.about-strip {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 1rem;
+  height: 26rem;
+}
+.about-strip figure { height: 100%; min-height: 0; overflow: hidden; }
+.about-strip .about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+/* ---------- Phones ---------- */
+@media (max-width: 767px) {
+  .about-hero { height: 80vh; border-radius: 0; }
+  .about-row,
+  .about-row.about-row-reverse { grid-template-columns: 1fr; gap: 1.5rem; }
+  .about-row.about-row-reverse .about-text { order: 2; }
+  .about-twoup { grid-template-columns: 1fr; }
+  .about-twoup .about-art { aspect-ratio: 4 / 5; }
+  .about-strip { grid-template-columns: 1fr 1fr; height: auto; }
+  .about-strip figure { aspect-ratio: 3 / 4; height: auto; }
+  .about-strip .about-text { grid-column: 1 / -1; padding: 0.5rem 0 0; }
+  .about-section { margin-bottom: 5rem; }
+  p { font-size: 1.25rem; }
+}

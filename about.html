@@ -24,6 +24,7 @@
         <link href="./sass/styles.min.css" rel="stylesheet">
         <link href="./styles.css" rel="stylesheet">
         <link href="./quick-questions.css" rel="stylesheet">
+        <link href="./about.css" rel="stylesheet">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -135,60 +136,78 @@
         </nav>
         </header>
 
-        <main class="container d-flex align-items-center justify-content-center flex-column position-relative">
-            <div class="filler-3"></div>
-            <h1 class="display-1 text-primary mt-5 light animated-h1"><span id="about" class="position-absolute">About </span><span id="dusty" class="position-absolute"> Dusty </span><span id="me" class="position-absolute">me</span></h1>
-            <div class="filler-3"></div>
-
-            <div id="about-content" class="">
-                <p class="m-4 text-indent light">
-                    I am passionate about front-end development and design! Since I have picked up the skill I have come across so many different communities and interesting technologies.
-                </p>
-                <p class="m-4 light">But who is this front-end developer? Well I have many wide ranging interests and hobbies. The TLDR is I am just a very positive and understanding guy who really enjoys getting to know people from many walks of life!</p>
-                <hr>
-                <img loading="lazy" src = "assets/images/profile pic.jpg" class="py-4 rounded" title="Dustin on a mountain">
-                <hr>
-                <img loading="lazy" src="assets/images/outdoors.jpg" class="py-4 rounded" title="looking out at mountains">
-                <p class="m-4 text-indent light">Currently you can find me roaming the mountains of my home state of Montana. When I need some time to think or just appreciate where I'm at, I go out for a nice hike, taking in all the natural beauty</p>
-                
-                <div class="filler-1"></div>
-
-                <div>
-                    <p class="m-4 text-indent light">I take a lot of joy in doing art when I can find the free time to do so! I admire animation in particular and hope to keep growing and sharing my works of art!</p>
-                    <video class="" width="100%" height="auto" muted loop playsinline poster="./assets/video/web/earth-show.jpg" autoplay data-play-when-visible>
-                        <source src="./assets/video/web/earth-show.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <hr class="my-4">
-                    <video width="100%" height="auto" muted loop playsinline poster="./assets/video/web/flappy-bird.jpg" autoplay data-play-when-visible>
-                        <source src="./assets/video/web/flappy-bird.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    
-                    <p class="m-4 text-indent light">As you can see here I have been trying my hand at game development too! I even created my own assets based on the characters from one of my favorite shows, Futurama!</p>
-                    
-                </div>
-
-                <div class="filler-1"></div>
-
-                <div>
-                    <div class="d-flex justify-content-center">
-                    <img loading="lazy" src="assets/images/moomoo.jpg" class="py-4" title="our old cat, moo moo">
-                    </div>
-                    <hr>
-                    <img loading="lazy" src="assets/images/chickens.jpg" class="py-4" title="chickens!">
-                    <p class="m-4 text-indent light">Animals are the best! Nothing like a nice spring day, getting in some work on the garden and having pets roaming around doing their thing!</p>
-                </div>
-
-                <div class="filler-1"></div>
-
-                <div>
-                    <div class="d-flex justify-content-center">
-                    <img loading="lazy" src="assets/images/challah.jpg">
-                    </div>
-                    <p class="m-4 text-indent light">I have also worked as a baker for many years! I have learned to make so much. French breads, Cheesecakes, Parfaits, Quiches, and many Vegan/Gluten Free desserts just to name a few. Nothing delights me more than to put care and skill into a recipe for others to enjoy!</p>
-                </div>
+        <!-- HERO: title animation over a Montana landscape -->
+        <section class="about-hero">
+            <div class="about-title">
+                <h1 class="display-1 text-primary light animated-h1"><span id="about" class="position-absolute">About </span><span id="dusty" class="position-absolute"> Dusty </span><span id="me" class="position-absolute">me</span></h1>
             </div>
+            <div class="about-hero-line">Front-end developer and designer in Montana</div>
+        </section>
+
+        <main class="container about-main d-flex flex-column position-relative">
+
+            <section class="about-intro">
+                <p class="light">I am passionate about front-end development and design! Since I have picked up the skill I have come across so many different communities and interesting technologies.</p>
+                <p class="light">But who is this front-end developer? Well I have many wide ranging interests and hobbies. The TLDR is I am just a very positive and understanding guy who really enjoys getting to know people from many walks of life!</p>
+            </section>
+
+            <!-- OUTDOORS: photo and text side by side -->
+            <section class="about-section">
+                <h2 class="about-heading">Outdoors</h2>
+                <div class="about-row">
+                    <figure><img loading="lazy" class="about-media about-selfie" src="assets/images/profile pic.jpg" alt="Dustin smiling on a snowy mountain above Missoula"></figure>
+                    <div class="about-text">
+                        <p class="light">Currently you can find me roaming the mountains of my home state of Montana. When I need some time to think or just appreciate where I'm at, I go out for a nice hike, taking in all the natural beauty.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ART AND ANIMATION: large feature video, then art beside a second video -->
+            <section class="about-section">
+                <h2 class="about-heading">Art and animation</h2>
+                <figure class="about-feature">
+                    <video class="about-media" muted loop playsinline autoplay data-play-when-visible poster="./assets/video/web/earth-show.jpg">
+                        <source src="./assets/video/web/earth-show.mp4" type="video/mp4">
+                    </video>
+                </figure>
+                <div class="about-twoup">
+                    <figure class="about-art"><img loading="lazy" class="about-media" src="assets/images/img-1.JPG" alt="Illustration of a group of characters on a mountaintop"></figure>
+                    <div>
+                        <figure class="about-vid">
+                            <video class="about-media" muted loop playsinline autoplay data-play-when-visible poster="./assets/video/web/flappy-bird.jpg">
+                                <source src="./assets/video/web/flappy-bird.mp4" type="video/mp4">
+                            </video>
+                        </figure>
+                        <div class="about-text">
+                            <p class="light">I take a lot of joy in doing art when I can find the free time to do so! I admire animation in particular, and I've been trying my hand at game development too, with my own assets based on characters from Futurama.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ANIMALS: strip of two photos and text -->
+            <section class="about-section">
+                <h2 class="about-heading">Animals and the garden</h2>
+                <div class="about-strip">
+                    <figure><img loading="lazy" class="about-media" src="assets/images/moomoo.jpg" alt="Dustin with Moo Moo the cat on his shoulder"></figure>
+                    <figure><img loading="lazy" class="about-media" src="assets/images/chickens.jpg" alt="Two chickens in the yard"></figure>
+                    <div class="about-text">
+                        <p class="light">Animals are the best! Nothing like a nice spring day, getting in some work on the garden and having pets roaming around doing their thing.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BAKING: text and photo, flipped -->
+            <section class="about-section">
+                <h2 class="about-heading">Baking</h2>
+                <div class="about-row about-row-reverse">
+                    <div class="about-text">
+                        <p class="light">I have also worked as a baker for many years: French breads, cheesecakes, parfaits, quiches and many vegan and gluten-free desserts. Nothing delights me more than to put care and skill into a recipe for others to enjoy!</p>
+                    </div>
+                    <figure><img loading="lazy" class="about-media" src="assets/images/challah.jpg" alt="Braided challah loaves with sesame seeds"></figure>
+                </div>
+            </section>
+
         </main>
 
 
