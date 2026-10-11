@@ -762,3 +762,14 @@ p.dark {
     overflow-x: clip;
   }
 }
+
+
+/* ------------------- HEADER SPACING FOR THE MEDIA MENU --------------------- */
+/* With the Media link added, the header only fits on one line on laptop-size
+   screens with slightly tighter spacing between the name, links and toggle. */
+@media (min-width: 1201px) and (max-width: 1500px) {
+  nav { gap: 3rem; }
+}
+@media (min-width: 1501px) and (max-width: 1999px) {
+  nav { gap: 5rem; }
+}

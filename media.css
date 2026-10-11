@@ -1,0 +1,141 @@
+/* ===================================================================
+   media.css
+   Shared by the Media pages: Design, Videography and Animation
+   (loaded after styles.css).
+   Light mode uses the site's red; dark mode (body.dark) its purple.
+   =================================================================== */
+
+.media-main { width: 100%; padding-top: 10rem; }
+
+.media-title { text-align: center; margin-bottom: 1.5rem; }
+.media-lede { max-width: 46rem; margin: 0 auto 7rem; text-align: center; }
+
+.media-heading {
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  font-weight: 300;
+  color: var(--color-primary);
+  margin: 0 0 1.5rem;
+}
+.media-subheading {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-primary);
+  margin: 0 0 0.75rem;
+}
+body.dark .media-heading,
+body.dark .media-subheading { color: var(--color-primary-light-dark-mode); }
+
+.media-text p { margin: 0 0 1rem; max-width: 40rem; }
+.media-list { margin: 0 0 1rem; padding-left: 1.4rem; list-style: disc; }
+.media-list li { font-size: 1.35rem; font-weight: 300; line-height: 1.5; margin-bottom: 0.35rem; }
+body.dark .media-list li { color: var(--color-neutral-fire); }
+
+.media-section { margin: 0 auto 8rem; }
+.media-step { margin-bottom: 4.5rem; }
+
+figure { margin: 0; }
+.media-media {
+  width: 100%;
+  display: block;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+body.dark .media-media { border-color: rgba(255, 255, 255, 0.14); }
+.media-cap {
+  font-size: 1rem;
+  color: #5f6070;
+  margin-top: 0.6rem;
+}
+body.dark .media-cap { color: #b9b6c8; }
+
+/* Text beside an image */
+.media-row {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Three options side by side; the chosen one is outlined */
+.media-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.media-chosen .media-media { outline: 3px solid var(--color-primary); outline-offset: 3px; }
+body.dark .media-chosen .media-media { outline-color: var(--color-primary-light-dark-mode); }
+
+/* Before and after, side by side */
+.media-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Page-length comparison: thumbnails drawn to the same scale */
+.media-length {
+  display: grid;
+  grid-template-columns: 8rem 8rem 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.media-length .media-text { padding-left: 1rem; }
+
+/* Day and night portraits */
+.media-portraits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  max-width: 52rem;
+}
+.media-portraits img { border: none; background: #f2f2f5; }
+.media-portraits figure:last-child img { background: var(--color-body-dark); }
+
+.media-tools { display: flex; flex-wrap: wrap; gap: 0.6rem; padding: 0; }
+.media-tools li {
+  font-size: 1.15rem;
+  padding: 0.35rem 1rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 999px;
+  color: var(--color-primary);
+}
+body.dark .media-tools li { border-color: var(--color-primary-light-dark-mode); color: var(--color-primary-light-dark-mode); }
+
+@media (max-width: 767px) {
+  .media-main { padding-top: 10rem; }
+  .media-lede { margin-bottom: 4rem; }
+  .media-row,
+  .media-options,
+  .media-pair { grid-template-columns: 1fr; gap: 1.5rem; }
+  .media-length { grid-template-columns: 7rem 7rem; gap: 1rem; }
+  .media-length .media-text { grid-column: 1 / -1; padding-left: 0; }
+  .media-section { margin-bottom: 5rem; }
+  .media-step { margin-bottom: 3rem; }
+  .media-list li { font-size: 1.2rem; }
+  p { font-size: 1.25rem; }
+}
+
+
+.media-link { color: var(--color-primary); }
+body.dark .media-link { color: var(--color-primary-light-dark-mode); }
+
+/* Videos on the Videography and Animation pages */
+.media-feature { margin-bottom: 1rem; }
+.media-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem;
+  background: #000;
+}
+.media-twoup {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .media-twoup { grid-template-columns: 1fr; gap: 1.5rem; }
+}
