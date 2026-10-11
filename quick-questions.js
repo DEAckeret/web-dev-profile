@@ -85,6 +85,18 @@
       ]
     },
     {
+      id: 'photography',
+      keywords: ['photo', 'photos', 'photography', 'photographer', 'camera', 'pictures', 'landscape', 'landscapes'],
+      answer: [
+        'I shoot nature, landscape and close-up photos, mostly around Montana.',
+        'My Photography page has a selection, and my Design page shows some of my Photoshop editing.'
+      ],
+      links: [
+        { label: 'Photography', href: 'photography.html' },
+        { label: 'Design', href: 'design.html' }
+      ]
+    },
+    {
       id: 'hobbies',
       keywords: ['hobby', 'hobbies', 'fun', 'free', 'interests', 'outside', 'weekend', 'like', 'enjoy'],
       answer: [

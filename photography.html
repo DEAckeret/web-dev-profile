@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Photography | D.E. Ackeret</title>
+
+        <meta name="description" content="Photography by Dustin E. Ackeret: nature, landscape and macro photos from Montana and beyond.">
+        <meta name="author" content="Dustin E. Ackeret">
+
+        <!-- Link preview card for social media and messaging apps -->
+        <meta property="og:title" content="Videography | D.E. Ackeret">
+        <meta property="og:description" content="Photography by Dustin E. Ackeret: nature, landscape and macro photos from Montana and beyond.">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://deackeret.github.io/web-dev-profile/photography.html">
+        <meta property="og:image" content="https://deackeret.github.io/web-dev-profile/assets/images/Day-mode-dusty.png">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="64x64" href="./assets/images/favicon.png">
+    
+        <!-- 'my scss modified' Bootstrap CSS -->
+        <link href="./sass/styles.min.css" rel="stylesheet">
+        <link href="./styles.css" rel="stylesheet">
+        <link href="./quick-questions.css" rel="stylesheet">
+        <link href="./media.css" rel="stylesheet">
+    </head>
+<body>
+    <!-- Apply saved dark mode as each element loads, before anything is drawn, so there's no light flash -->
+    <script>
+        (function () {
+            try { if (localStorage.getItem('darkMode') !== 'true') return; } catch (e) { return; }
+            document.body.classList.add('dark');
+            function markDark(node) {
+                if (node.nodeType !== 1) return;
+                if (node.matches('.light, .dark-mode-toggle')) node.classList.add('dark');
+                if (node.matches('.hero-pose img')) node.src = './assets/images/Night-mode-dusty.png';
+            }
+            var watcher = new MutationObserver(function (changes) {
+                changes.forEach(function (change) { change.addedNodes.forEach(markDark); });
+            });
+            watcher.observe(document.body, { childList: true, subtree: true });
+            document.addEventListener('DOMContentLoaded', function () { watcher.disconnect(); });
+        })();
+    </script>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav d-none">
+        <div class="light">
+            <ul class="nav-list nav-pills light gap-2">
+                <li class="rounded-3 nav-item px-2 light">
+                    <a class="nav-link active light" href="index.html" title="home">Home</a>
+                </li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle light" href="#" id="navDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title ="projects">Projects</a>
+                    <ul class="dropdown-menu" aria-labelledby="navDropdown">
+                        <li><a class="dropdown-item" href="https://deackeret.github.io/Space-Tourism/" rel="noopener noreferrer" target="_blank" title="space tourism site">Space Tourism</a></li>
+                        <li><a class="dropdown-item" href="https://deackeret.github.io/Dictionary-App-API/" rel="noopener noreferrer" target="_blank" title="dictionary api site">Dictionary API App</a></li>
+                        <li><a class="dropdown-item" href="https://deackeret.github.io/news-homepage/" rel="noopener noreferrer" target="_blank" title="responsive grid site">Responsive Grid</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle light" href="#" id="mediaDropdown0" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="media">Media</a>
+                    <ul class="dropdown-menu" aria-labelledby="mediaDropdown0">
+                        <li><a class="dropdown-item" href="videography.html">Videography</a></li>
+                        <li><a class="dropdown-item active" href="photography.html" aria-current="page">Photography</a></li>
+                        <li><a class="dropdown-item" href="animation.html">Animation</a></li>
+                        <li><a class="dropdown-item" href="design.html">Design</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link light" href="about.html" title="about me">About me</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link contact-me light" href="contact.html" title="contact me">Contact me</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END MOBILE NAV -->
+
+    <header class="light">
+        <nav class="d-flex flex-direction-row align-items-center justify-content-around">
+    
+            <h1 class="display-1 header-name light">D. E. Ackeret</h1>
+    
+            <div class="loader light"></div>
+
+            <!-- HAMBURGER -->
+
+            <button class="hamburger-btn light" type="menu" title="mobile menu button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+            </button>
+            
+        <!-- END HAMBURGER -->
+    
+            <div class="light">
+                <ul class="nav nav-pills light">
+                    <li class="rounded-3 nav-item px-2 light">
+                        <a class="nav-link active light" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown px-2">
+                        <a class="nav-link dropdown-toggle light" href="#" id="navDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+                        <ul class="dropdown-menu" aria-labelledby="navDropdown">
+                            <li><a class="dropdown-item" href="https://deackeret.github.io/Space-Tourism/" rel="noopener noreferrer" target="_blank">Space Tourism</a></li>
+                            <li><a class="dropdown-item" href="https://deackeret.github.io/Dictionary-App-API/" rel="noopener noreferrer" target="_blank">Dictionary API App</a></li>
+                            <li><a class="dropdown-item" href="https://deackeret.github.io/news-homepage/" rel="noopener noreferrer" target="_blank">Responsive Grid</a></li>
+                        </ul>
+                    </li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle light" href="#" id="mediaDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="media">Media</a>
+                    <ul class="dropdown-menu" aria-labelledby="mediaDropdown1">
+                        <li><a class="dropdown-item" href="videography.html">Videography</a></li>
+                        <li><a class="dropdown-item active" href="photography.html" aria-current="page">Photography</a></li>
+                        <li><a class="dropdown-item" href="animation.html">Animation</a></li>
+                        <li><a class="dropdown-item" href="design.html">Design</a></li>
+                    </ul>
+                </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link light" href="about.html">About me</a>
+                    </li>
+                    <li class="nav-item px-2">
+                        <a class="nav-link contact-me light" href="contact.html">Contact me</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="dark-light-toggle">
+                <div class="sun light">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+                        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+                    </svg>
+                </div>
+                <div class="dark-mode-toggle py-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-toggle2-on" viewBox="0 0 16 16">
+                        <path d="M7 5H3a3 3 0 0 0 0 6h4a5 5 0 0 1-.584-1H3a2 2 0 1 1 0-4h3.416q.235-.537.584-1"/>
+                        <path d="M16 8A5 5 0 1 1 6 8a5 5 0 0 1 10 0"/>
+                    </svg>
+                </div>
+                <div class="moon light">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+                        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/>
+                    </svg>
+                </div>
+            </div>
+        </nav>
+        </header>
+
+        <main class="container media-main">
+            <h1 class="display-1 text-primary light media-title">Photography</h1>
+            <p class="light media-lede">Nature, landscape and close-up photos, mostly from Montana. These are earlier photos, from 2008 to 2012; newer work is on the way.</p>
+
+            <section class="media-section">
+                <figure class="media-feature">
+                    <img class="media-media" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890e9a64-0d2c-4787-9f52-fcda8b2678d3/d5cb4wn-ffdab87e-d98b-4ecd-83da-bf9d8e7dd3fe.jpg/v1/fill/w_1600,h_1195,q_80,strp/break_out__by_isometic_superstar_d5cb4wn-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTkzNiIsInBhdGgiOiIvZi84OTBlOWE2NC0wZDJjLTQ3ODctOWY1Mi1mY2RhOGIyNjc4ZDMvZDVjYjR3bi1mZmRhYjg3ZS1kOThiLTRlY2QtODNkYS1iZjlkOGU3ZGQzZmUuanBnIiwid2lkdGgiOiI8PTI1OTIifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.SjocGy9_3P8jGeHO8yoa69xjawoJe48RhOa0GJnJVyo" width="1600" height="1195" alt="Sunflowers growing along a chain-link fence" referrerpolicy="no-referrer">
+                    <figcaption class="media-cap">Sunflowers along a fence, 2012</figcaption>
+                </figure>
+                <div class="media-masonry">
+                    <figure>
+                        <img loading="lazy" class="media-media" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890e9a64-0d2c-4787-9f52-fcda8b2678d3/d5cb5ms-dd6d461c-a5b9-40d7-9a74-7db324f8fb61.jpg/v1/fill/w_1600,h_2142,q_80,strp/soak_it_in__by_isometic_superstar_d5cb5ms-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjU5MiIsInBhdGgiOiIvZi84OTBlOWE2NC0wZDJjLTQ3ODctOWY1Mi1mY2RhOGIyNjc4ZDMvZDVjYjVtcy1kZDZkNDYxYy1hNWI5LTQwZDctOWE3NC03ZGIzMjRmOGZiNjEuanBnIiwid2lkdGgiOiI8PTE5MzYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.cECs3p5TF9Eg-f-i5MZT2cHxYdnwPrgnPAqPJKWZne4" width="1600" height="2142" alt="Sunflower close-up" referrerpolicy="no-referrer">
+                        <figcaption class="media-cap">Sunflower close-up, 2012</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" class="media-media" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890e9a64-0d2c-4787-9f52-fcda8b2678d3/d5cb4q9-f5c4a418-23cf-4096-92df-b6f42275f3ce.jpg/v1/fill/w_900,h_673,q_75,strp/sun_dance_by_isometic_superstar_d5cb4q9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjczIiwicGF0aCI6Ii9mLzg5MGU5YTY0LTBkMmMtNDc4Ny05ZjUyLWZjZGE4YjI2NzhkMy9kNWNiNHE5LWY1YzRhNDE4LTIzY2YtNDA5Ni05MmRmLWI2ZjQyMjc1ZjNjZS5qcGciLCJ3aWR0aCI6Ijw9OTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.vQlGB8g4xpNgxQKJUCkRbHXUReb9NtV-xYEqYrcEhB8" width="900" height="673" alt="A sunflower against blue sky" referrerpolicy="no-referrer">
+                        <figcaption class="media-cap">Sunflower against the sky, 2012</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" class="media-media" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890e9a64-0d2c-4787-9f52-fcda8b2678d3/d1mdacn-c74da87c-86c7-4e0b-a3b7-c6af3d5e813c.jpg/v1/fill/w_600,h_400,q_75,strp/a_way_of_escape_by_isometic_superstar_d1mdacn-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6Ii9mLzg5MGU5YTY0LTBkMmMtNDc4Ny05ZjUyLWZjZGE4YjI2NzhkMy9kMW1kYWNuLWM3NGRhODdjLTg2YzctNGUwYi1hM2I3LWM2YWYzZDVlODEzYy5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.q_8-hE-KT7Wxi-PxIo1hEP95JcFp5B6tCaToOT5b0no" width="600" height="400" alt="A red canoe pulled up on a lake shore" referrerpolicy="no-referrer">
+                        <figcaption class="media-cap">Red canoe at the lake, 2008</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" class="media-media" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890e9a64-0d2c-4787-9f52-fcda8b2678d3/d1mdam9-09c5a668-a8df-4310-a9bd-8c9f6b84664e.jpg/v1/fill/w_600,h_400,q_75,strp/untouchable_by_isometic_superstar_d1mdam9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6Ii9mLzg5MGU5YTY0LTBkMmMtNDc4Ny05ZjUyLWZjZGE4YjI2NzhkMy9kMW1kYW05LTA5YzVhNjY4LWE4ZGYtNDMxMC1hOWJkLThjOWY2Yjg0NjY0ZS5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Dg8B-tQZ0VfFGSoBXcJwt4ZH2dqR9bq8NrnEul51ZZo" width="600" height="400" alt="A still mountain lake reflecting trees" referrerpolicy="no-referrer">
+                        <figcaption class="media-cap">Still lake reflection, 2008</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" class="media-media" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890e9a64-0d2c-4787-9f52-fcda8b2678d3/d5calxq-48b8b426-012b-4dea-9714-12dd8ab03c91.jpg/v1/fill/w_900,h_1205,q_75,strp/best_friends_by_isometic_superstar_d5calxq-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTIwNSIsInBhdGgiOiIvZi84OTBlOWE2NC0wZDJjLTQ3ODctOWY1Mi1mY2RhOGIyNjc4ZDMvZDVjYWx4cS00OGI4YjQyNi0wMTJiLTRkZWEtOTcxNC0xMmRkOGFiMDNjOTEuanBnIiwid2lkdGgiOiI8PTkwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.9Kwtr9Myd1SsAhsQrLEwRgdI17TREjjXE6O7M97Dy0w" width="900" height="1205" alt="A white dog in the garden, looking up" referrerpolicy="no-referrer">
+                        <figcaption class="media-cap">Dog portrait, 2012</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" class="media-media" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890e9a64-0d2c-4787-9f52-fcda8b2678d3/d1pnws9-dd5dcf26-9d37-4eb6-8bb1-1a4d7004df53.jpg/v1/fill/w_600,h_400,q_75,strp/wheet_by_isometic_superstar_d1pnws9-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6Ii9mLzg5MGU5YTY0LTBkMmMtNDc4Ny05ZjUyLWZjZGE4YjI2NzhkMy9kMXBud3M5LWRkNWRjZjI2LTlkMzctNGViNi04YmIxLTFhNGQ3MDA0ZGY1My5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.YlTDk_x5MzsustgD5J-wMwBijkj7WHmccHU_Nwu9kEA" width="600" height="400" alt="The sun setting through tall grass" referrerpolicy="no-referrer">
+                        <figcaption class="media-cap">Sunset through tall grass, 2008</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" class="media-media" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890e9a64-0d2c-4787-9f52-fcda8b2678d3/d397x6s-baa184f9-d06b-43e8-8aa9-9a96817653d6.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTQwIiwicGF0aCI6Ii9mLzg5MGU5YTY0LTBkMmMtNDc4Ny05ZjUyLWZjZGE4YjI2NzhkMy9kMzk3eDZzLWJhYTE4NGY5LWQwNmItNDNlOC04YWE5LTlhOTY4MTc2NTNkNi5qcGciLCJ3aWR0aCI6Ijw9NzIwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.HuIqypZ9Il1yKePKqrm7xYp7cs_UglAjnclRAIoUZlw" width="720" height="540" alt="A hill rising above low fog" referrerpolicy="no-referrer">
+                        <figcaption class="media-cap">Hill above the fog, 2011</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" class="media-media" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890e9a64-0d2c-4787-9f52-fcda8b2678d3/d1mdaxk-defc0e52-152d-4fa2-83a5-e31786d58fe6.jpg/v1/fill/w_600,h_400,q_75,strp/trees_in_da_sky_by_isometic_superstar_d1mdaxk-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6Ii9mLzg5MGU5YTY0LTBkMmMtNDc4Ny05ZjUyLWZjZGE4YjI2NzhkMy9kMW1kYXhrLWRlZmMwZTUyLTE1MmQtNGZhMi04M2E1LWUzMTc4NmQ1OGZlNi5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.y-f4cq9yboKsUi38hNlYzJQCsgVqElyIzURiQ78sjpo" width="600" height="400" alt="Yellow fall leaves against blue sky, from below" referrerpolicy="no-referrer">
+                        <figcaption class="media-cap">Fall leaves overhead, 2008</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" class="media-media" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890e9a64-0d2c-4787-9f52-fcda8b2678d3/d1lr2se-0005aede-da65-4d35-a933-f16c45f75c9b.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6Ii9mLzg5MGU5YTY0LTBkMmMtNDc4Ny05ZjUyLWZjZGE4YjI2NzhkMy9kMWxyMnNlLTAwMDVhZWRlLWRhNjUtNGQzNS1hOTMzLWYxNmM0NWY3NWM5Yi5qcGciLCJ3aWR0aCI6Ijw9ODY2In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.QkJp8wY8FvgK7xPJUHBXu8L-sDi3trnbkI0cmj0JUm0" width="866" height="576" alt="Purple and yellow violets" referrerpolicy="no-referrer">
+                        <figcaption class="media-cap">Violets, 2008</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" class="media-media" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890e9a64-0d2c-4787-9f52-fcda8b2678d3/d1slvkn-c8b7e330-140c-40f6-8a0c-c523fb80ce12.jpg/v1/fill/w_600,h_400,q_75,strp/from_the_mountains_by_isometic_superstar_d1slvkn-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6Ii9mLzg5MGU5YTY0LTBkMmMtNDc4Ny05ZjUyLWZjZGE4YjI2NzhkMy9kMXNsdmtuLWM4YjdlMzMwLTE0MGMtNDBmNi04YTBjLWM1MjNmYjgwY2UxMi5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.ee0eNSIkuszyTzj2HrfnNrjWL5FJgoAJ_sDHGvu8zrc" width="600" height="400" alt="A dark mountain lake at dusk" referrerpolicy="no-referrer">
+                        <figcaption class="media-cap">Mountain lake at dusk, 2009</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" class="media-media" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890e9a64-0d2c-4787-9f52-fcda8b2678d3/d1mdau6-7fab8f39-4ad9-4a32-9d46-5969316c84a2.jpg/v1/fill/w_600,h_400,q_75,strp/the_sun_touched_my_leaf__by_isometic_superstar_d1mdau6-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6Ii9mLzg5MGU5YTY0LTBkMmMtNDc4Ny05ZjUyLWZjZGE4YjI2NzhkMy9kMW1kYXU2LTdmYWI4ZjM5LTRhZDktNGEzMi05ZDQ2LTU5NjkzMTZjODRhMi5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.lsb3Ekemh0UPxPUvoenFrlzNCkzlI9ViSn3-n8Ekstk" width="600" height="400" alt="A leaf on the grass in evening light" referrerpolicy="no-referrer">
+                        <figcaption class="media-cap">Leaf in evening light, 2008</figcaption>
+                    </figure>
+                    <figure>
+                        <img loading="lazy" class="media-media" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/890e9a64-0d2c-4787-9f52-fcda8b2678d3/d1pnpyd-1f07be45-2c28-4ae6-9a05-14120e2cd794.jpg/v1/fill/w_600,h_400,q_75,strp/afternoon_drive__by_isometic_superstar_d1pnpyd-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6Ii9mLzg5MGU5YTY0LTBkMmMtNDc4Ny05ZjUyLWZjZGE4YjI2NzhkMy9kMXBucHlkLTFmMDdiZTQ1LTJjMjgtNGFlNi05YTA1LTE0MTIwZTJjZDc5NC5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.3ZqcfMBLKIODMl6CwBTCswku978lMBWVSEaJP-qZjy4" width="600" height="400" alt="A country road under big clouds" referrerpolicy="no-referrer">
+                        <figcaption class="media-cap">Afternoon drive, 2008</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="filler-1"></div>
+            <div>
+                <ul class="contact-info d-flex align-items-center justify-content-between mx-5 px-0 gap-5">
+                    <li class="contact-info-item">
+                        <a href="
+                        https://www.linkedin.com/in/dustin-ackeret/
+                        " target="_blank" title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-linkedin social light" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                          </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/DEAckeret" target="_blank" title="github">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-github social light" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                              </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:
+                        dustinackeret@gmail.com" title="send email">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-envelope-fill social light" viewBox="0 0 16 16">
+                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                          </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/dustinackeret/" target="_blank" rel="noopener" title="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-instagram social light" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                          </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="filler-1"></div>
+            <div class="my-5 mx-5">
+                <p class="light">Dustin E. Ackeret &copy; 2026</p>
+            </div>
+        </footer>
+
+    <!-- jQuery -->
+    <!-- "Quick questions about Dustin" helper (pre-written answers, not AI) -->
+    <script src="./quick-questions.js"></script>
+    <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
+    <script src="./dist/jQuery.webpack.bundle.js"></script>
+    <!-- Bootstrap JS -->
+    <!-- <script src="/node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/index.js"></script> -->
+    <script src="./dist/bootstrap.webpack.bundle.js"></script>
+    <script src="./dist/profileWebsite.webpack.bundle.js"></script>
+    
+</body>
+</html>

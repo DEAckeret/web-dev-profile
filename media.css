@@ -139,3 +139,20 @@ body.dark .media-link { color: var(--color-primary-light-dark-mode); }
 @media (max-width: 767px) {
   .media-twoup { grid-template-columns: 1fr; gap: 1.5rem; }
 }
+
+/* Photography gallery: a masonry-style grid that keeps each photo's shape */
+.media-masonry {
+  columns: 3 16rem;
+  column-gap: 1.25rem;
+}
+.media-masonry figure {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+}
+.media-masonry img,
+.media-feature img,
+.media-pano img { height: auto; }
+
+/* Wide panoramas */
+.media-pano { margin-bottom: 1.5rem; }
+img.media-media { height: auto; }
