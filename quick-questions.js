@@ -73,7 +73,7 @@
         'html', 'css', 'javascript', 'js', 'react', 'bootstrap', 'jquery', 'sass', 'framework', 'frameworks', 'tools', 'use', 'know'],
       answer: [
         'For code: HTML, CSS and JavaScript, plus React, Bootstrap, jQuery and Sass.',
-        'For design: Figma, Adobe Photoshop, Procreate, Toonsquid and Blender.'
+        'For design: Figma, Affinity, Procreate, Toonsquid and Blender. I\'m also experienced with Adobe Photoshop.'
       ]
     },
     {
@@ -81,7 +81,7 @@
       keywords: ['design', 'designer', 'designed', 'figma', 'photoshop', 'procreate', 'blender', 'toonsquid', 'ux', 'ui', 'site', 'website'],
       answer: [
         'I do design as well as development. This website is my own design, from layout and colors to the day and night versions of my portrait.',
-        'My design tools are Figma, Adobe Photoshop, Procreate, Toonsquid and Blender.'
+        'My design tools are Figma, Affinity, Procreate, Toonsquid and Blender, and I\'m experienced with Adobe Photoshop.'
       ]
     },
     {
