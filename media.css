@@ -156,3 +156,22 @@ body.dark .media-link { color: var(--color-primary-light-dark-mode); }
 /* Wide panoramas */
 .media-pano { margin-bottom: 1.5rem; }
 img.media-media { height: auto; }
+
+/* Videography: a note pointing to Instagram, and a gold glow on the
+   footer's Instagram icon. The glow class is only on videography.html. */
+.media-more {
+  max-width: 46rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+.instagram-glow .social {
+  filter: drop-shadow(0 0 0.35rem #f5b301) drop-shadow(0 0 1rem rgba(245, 179, 1, 0.6));
+  transition: filter 0.2s ease;
+}
+.instagram-glow:hover .social,
+.instagram-glow:focus-visible .social {
+  filter: drop-shadow(0 0 0.5rem #f5b301) drop-shadow(0 0 1.5rem rgba(245, 179, 1, 0.8));
+}
+@media (prefers-reduced-motion: reduce) {
+  .instagram-glow .social { transition: none; }
+}
