@@ -243,12 +243,21 @@
             <!-- ILLUSTRATION -->
             <section class="media-section">
                 <h2 class="media-heading">Illustration</h2>
-                <div class="media-row">
-                    <figure><img loading="lazy" class="media-media" src="assets/images/img-1.JPG" alt="Illustration of my friends and I on a movie poster"></figure>
-                    <figure><img loading="lazy" class="media-media" src="assets/images/img-1.JPG" alt="A collage of my friends and myself, used as reference for the movie poster"></figure>
-                    <div class="media-text">
-                        <p class="light">A character illustration I made for my Media Arts class in college. I thought a movie poster aesthetic would be kind of fun!</p>
-                    </div>
+                <!-- Two images at the same size, side by side (stacked on phones), text underneath.
+                     media-pair--match gives both images the poster's 2:3 shape. -->
+                <div class="media-pair media-pair--match">
+                    <figure>
+                        <img loading="lazy" class="media-media" src="assets/images/img-1.JPG" alt="Illustration of my friends and me on a movie poster">
+                        <figcaption class="media-cap">The finished poster</figcaption>
+                    </figure>
+                    <figure>
+                        <!-- Placeholder: swap this src for the reference collage -->
+                        <img loading="lazy" class="media-media" src="assets/images/img-1.JPG" alt="A collage of my friends and myself, used as reference for the movie poster">
+                        <figcaption class="media-cap">The reference collage</figcaption>
+                    </figure>
+                </div>
+                <div class="media-text">
+                    <p class="light">A character illustration I made for my Media Arts class in college. I thought a movie poster aesthetic would be kind of fun!</p>
                 </div>
             </section>
 
@@ -256,7 +265,7 @@
             <section class="media-section">
                 <h2 class="media-heading">Designing this site</h2>
                 <div class="media-text">
-                    <p class="light">The portrait on my home page has a day version and a night version that swap with the dark mode toggle. Light mode uses Orange and warm tones; dark mode switches to purples. There are also fun little easter eggs in night mode!</p>
+                    <p class="light">The portrait on my home page has a day version and a night version that swap with the dark mode toggle. Light mode uses orange and warm tones; dark mode switches to purples. There are also fun little easter eggs in night mode!</p>
                 </div>
                 <div class="media-portraits">
                     <figure>
