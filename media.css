@@ -185,3 +185,47 @@ img.media-media { height: auto; }
   object-fit: cover;
   height: auto;
 }
+
+/* Photography "Recent work": a collage instead of an even grid.
+   Six columns; a regular photo takes two, so three sit side by side.
+   .is-wide takes four columns and two rows, .is-tall two columns and two
+   rows, .is-full the whole width and three rows. "dense" packing lets
+   later photos fill any gaps. Photos are cropped slightly to fill their
+   tile; on phones they stack at their natural shape with no cropping. */
+.media-collage {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-auto-flow: dense;
+  gap: 1.25rem;
+}
+.media-collage figure {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.media-collage img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.media-collage .is-wide { grid-column: span 4; grid-row: span 2; }
+.media-collage .is-tall { grid-row: span 2; }
+.media-collage .is-tall img { aspect-ratio: 3 / 4; }
+.media-collage .is-full { grid-column: 1 / -1; grid-row: span 3; }
+
+@media (max-width: 991px) {
+  .media-collage { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .media-collage { grid-template-columns: 1fr; }
+  .media-collage figure,
+  .media-collage .is-wide,
+  .media-collage .is-tall,
+  .media-collage .is-full { grid-column: auto; grid-row: auto; }
+  .media-collage img,
+  .media-collage .is-tall img { aspect-ratio: auto; }
+}
