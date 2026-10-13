@@ -229,3 +229,8 @@ img.media-media { height: auto; }
   .media-collage img,
   .media-collage .is-tall img { aspect-ratio: auto; }
 }
+
+/* Panoramas under the Recent work collage: full width, never cropped */
+.media-panos-title { margin-top: 3rem; }
+.media-panos figure { margin-bottom: 2rem; }
+.media-panos img { width: 100%; height: auto; }
