@@ -234,3 +234,18 @@ img.media-media { height: auto; }
 .media-panos-title { margin-top: 3rem; }
 .media-panos figure { margin-bottom: 2rem; }
 .media-panos img { width: 100%; height: auto; }
+
+/* Animation page: videos that keep their own shape instead of 16:9 */
+.media-video--natural { aspect-ratio: auto; height: auto; object-fit: contain; }
+.media-grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem 1.5rem;
+  align-items: start;
+}
+/* The 3D pair: a wide render beside a square one, sized to the same height */
+.media-grid2--3d { grid-template-columns: 16fr 9fr; align-items: end; }
+@media (max-width: 767px) {
+  .media-grid2,
+  .media-grid2--3d { grid-template-columns: 1fr; }
+}
