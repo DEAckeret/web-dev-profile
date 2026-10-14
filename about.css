@@ -135,3 +135,35 @@ figure { margin: 0; }
   .about-section { margin-bottom: 5rem; }
   p { font-size: 1.25rem; }
 }
+
+/* ---------- Added sections ---------- */
+/* Baking: four photos in a row under the challah */
+.about-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.about-gallery figure { aspect-ratio: 4 / 3; }
+
+/* Theater: photos of different shapes shown at the same height.
+   Each figure's --ar (width / height) sets its share of the row. */
+.about-stage {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.about-stage figure { flex: var(--ar) 1 0; aspect-ratio: var(--ar); min-width: 0; }
+
+/* EMT: show the whole certificate, not a cropped tile */
+.about-row.about-row-natural figure { aspect-ratio: auto; }
+.about-row.about-row-natural .about-media { height: auto; }
+
+.about-feature + .about-text { margin-top: 1.5rem; }
+
+@media (max-width: 767px) {
+  .about-gallery { grid-template-columns: 1fr 1fr; }
+  .about-stage { flex-wrap: wrap; }
+  .about-stage figure { flex-basis: 40%; }
+  .about-stage figure:nth-child(2) { order: -1; flex-basis: 100%; }
+}
