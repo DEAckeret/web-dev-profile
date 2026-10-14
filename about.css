@@ -167,3 +167,10 @@ figure { margin: 0; }
   .about-stage figure { flex-basis: 40%; }
   .about-stage figure:nth-child(2) { order: -1; flex-basis: 100%; }
 }
+
+/* Art: illustration beside text, text centered on it */
+.about-twoup.about-twoup-centered { align-items: center; }
+.about-twoup.about-twoup-centered .about-text { margin-top: 0; }
+/* Game development: second game video beside text */
+.about-row.about-row-video { margin-top: 3rem; }
+.about-row.about-row-video figure { aspect-ratio: 16 / 9; }
